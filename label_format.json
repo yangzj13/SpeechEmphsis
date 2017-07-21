@@ -1,0 +1,15 @@
+{
+	"language":"zh-CN",
+	"length":3,
+	"text":[
+	{"word":"阿",
+	"begin":0.000,
+	"end":0.1000},
+	{"word":"根",
+	"begin":0.1000,
+	"end":0.2000},
+	
+	{"word":"地",
+	"begin":5.000,
+	"end":5.1000
+}

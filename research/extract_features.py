@@ -49,5 +49,3 @@ if __name__ == "__main__":
 		print(fs.shape, labels.shape)
 		print("data shape =", fs.shape[:2])
 		np.savez(dataName, X = fs, Y = labels)
-	
-

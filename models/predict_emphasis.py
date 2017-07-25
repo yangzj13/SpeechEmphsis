@@ -9,8 +9,12 @@ import numpy as np
 import keras.backend as K
 import h5py
 import librosa
+sys.path.append("..")
+import utils.features
 
-def ext_feature(y, )
+def ext_feature(y):
+	return utils.features.extract_all(y)
+
 
 def emphasis(feature, mono, threshold = 0.3):
 	"""
@@ -22,8 +26,8 @@ def emphasis(feature, mono, threshold = 0.3):
 	emphasis    : [n_words, 2](<string>word text, <float>propebility of emphasis)
 	"""
 
-	model = model_from_json(open('emphasis_architecture.json').read())    
-	model.load_weights('emphasis_weights.h5')    
+	model = model_from_json(open('emphasis_architecture.json').read())
+	model.load_weights('emphasis_weights.h5')
 
 	pred = model.predict(feature[np.newaxis, :])[0,:,1]
 
